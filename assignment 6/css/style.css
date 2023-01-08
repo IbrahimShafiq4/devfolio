@@ -1,0 +1,261 @@
+:root {
+    --main-color: #0078ff;
+    --sec-color: #cde1f8;
+    --main-transition: 0.3s linear;
+    --box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Start Global Rule */
+
+body {
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.main-header {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.main-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 40px;
+    background-color: var(--main-color);
+}
+
+.bg-prop {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* End Global Rule */
+
+.up {
+    background-color: var(--main-color);
+    border-radius: 50%
+}
+
+
+/* Start Navbar */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+}
+
+.nav-item {
+    font-size: 17px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: var(--main-transition)
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 37%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+
+/* End Navbar */
+
+/* Start Landing */
+.landing-section {
+    background-image: url(../images/intro-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.layer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 80px;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-section p {
+        font-size: 25px !important;
+    }
+}
+
+/* End Landing */
+
+/* Start About */
+.about .container {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 575px) {
+    .about .container {
+        padding: 20px;
+    }
+}
+
+.about .skillPro {
+    height: 10px;
+    background-color: var(--sec-color);
+}
+
+.about .skillPro span {
+    background-color: var(--main-color);
+    height: 100%;
+}
+
+.about h3 {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.about h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 3px; 
+    background-color: var(--main-color);
+}
+
+/* End About */
+
+/* Start Services */
+.services-box {
+    box-shadow: var(--box-shadow);
+}
+
+.services-ico i {
+    border-radius: 50%;
+    transition: var(--main-transition);
+    border: 10px solid var(--main-color);
+}
+
+.services-box:hover .services-ico i {
+    background-color: var(--main-color);
+    border: 10px solid var(--sec-color);
+    color: #fff;
+}
+/* End Services */
+
+/* Start Stats */
+.stats {
+    background-image: url(../images/counters-bg.jpg);
+}
+
+.blue-layer {
+    background-color: #0078ff;
+}
+
+.stats-ico {
+    border: 10px solid var(--sec-color);
+    border-radius: 50%;
+    
+}
+
+.stats-ico i {
+    font-size: 30px
+}
+
+/* End Stats */
+
+/* start portfolio */
+.por-content {
+    box-shadow: var(--box-shadow);
+}
+
+.por-content img {
+    transition: var(--main-transition)
+}
+
+.por-content:hover img {
+    transform: scale(1.1);
+}
+
+.wd {
+    color: var(--main-color)
+}
+
+.inner-content i {
+    color: var(--main-color);
+    cursor: pointer;
+}
+/* End portfolio */
+
+/* Start Feedback */
+.feedback {
+    background-image: url(../images/overlay-bg.jpg);
+    height: 50vh;
+}
+
+.carousel-inner {
+    transform: translate(-50%, -50%);
+}
+
+.carousel-indicators {
+    top: 22vh;
+}
+
+.feedback img {
+    border-radius: 50%;
+}
+
+.feedback i {
+    color: var(--main-color);
+    border-radius: 50%;
+}
+/* End Feedback */
+
+/* Start Blog */
+
+.blog-content .sh {
+    box-shadow: var(--box-shadow);
+}
+
+.blog .topic {
+    transform: translate(-50%, -15%);
+    background-color: var(--main-color);
+    font-size: 12px;
+}
+
+.person-content img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.footer-content {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+.time i {
+    color: var(--main-color);
+}
+
+/* End Blog */
